@@ -31,14 +31,15 @@ export default function Intro() {
             }}
           >
             <Image
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=368&h=368&q=100"
+              src="/portfolio_image .jpeg"
               alt="Ricardo portrait"
-              width="192"
-              height="192"
-              quality="95"
+              width={192}
+              height={192}
+              quality={95}
               priority={true}
               className="h-40 w-40 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
             />
+
           </motion.div>
 
           <motion.span
@@ -62,7 +63,7 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hi, I’m Aryan, and I love building things. When a cool app idea strikes my mind, I obsess over it until it’s real, polished, and running smoothly.</span> 
+        <span className="font-bold">Hi, I’m Aryan, and I love building things. When a cool app idea strikes my mind, I obsess over it until it’s real, polished, and running smoothly.</span>
       </motion.h1>
 
       <motion.div
@@ -76,13 +77,13 @@ export default function Intro() {
 
         <a
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-          href="/CV.pdf"
+          href="/Aryan Kshatriya Resume.pdf"
           download
         >
           Download CV{" "}
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
-{/* 
+        {/* 
         <a
           className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
           href="https://linkedin.com"

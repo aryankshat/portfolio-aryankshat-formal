@@ -54,25 +54,25 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Wat is Dis",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
+      "A fun-packed app for kids to learn through cool puzzles, awesome games, and a colorful picture dictionary—because learning should feel like playtime!",
     tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    videoUrl: "https://www.youtube.com/embed/nkVlYvLPA-A",
+    videoUrl: "https://www.youtube.com/embed/70vzI2c6ugY",
   },
   {
-    title: "rmtDev",
-    description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
+    title: "Pripay",
+    description: 
+      "An app that motivates buyers to hit their goals with exciting rewards when they’re close, helping sellers boost sales and earnings. Buyers enjoy rewards they might’ve missed, creating a win-win for both!",
     tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    videoUrl:  "https://www.youtube.com/embed/UMZbug-d5f4",
+    videoUrl:  "https://www.youtube.com/embed/BytZhTdKEy0",
   },
   {
-    title: "Word Analytics",
+    title: "Starlight",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
+      "Unlock a world of entertainment with our app, offering seamless streaming of movies and shows, plus smart parental controls, device management, and personalized features for an engaging and family-friendly experience.",
     tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    videoUrl:  "https://www.youtube.com/watch?v=Uo_kT8hT79g",
+    videoUrl:  "https://www.youtube.com/embed/J5XMS2sERyg",
   },
 ] as const;
 
