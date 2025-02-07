@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import SectionHeading from "./section-heading";
 import { projectsData } from "@/lib/data";
@@ -20,7 +20,16 @@ const ArrowRight = () => (
 );
 
 export default function Projects() {
-  const { ref: sectionRef } = useSectionInView("Projects", window.innerWidth < 1024 ? 0.2 : 0.5);
+  const [threshold, setThreshold] = useState(0.5);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setThreshold(window.innerWidth < 1024 ? 0.2 : 0.5);
+    }
+  }, []);
+
+  const { ref: sectionRef } = useSectionInView("Projects", threshold);
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
 
