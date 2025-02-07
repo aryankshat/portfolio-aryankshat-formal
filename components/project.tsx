@@ -15,10 +15,9 @@ export default function Project({
   const [isHovered, setIsHovered] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
-  // Adjusted scroll offset to reach max scale earlier
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0.1 1", "0.8 1"], // Adjusted values to make it grow faster
+    offset: ["0.1 1", "0.8 1"],
   });
 
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.85, 1]);
@@ -26,7 +25,7 @@ export default function Project({
 
   const getEmbedUrl = (url: string) => {
     const videoId = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|v\/|embed\/))([^&?\s]+)/)?.[1];
-    return videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=0&rel=0&modestbranding=1` : url;
+    return videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=0&rel=0&modestbranding=1&showinfo=0` : url;
   };
 
   return (
@@ -41,16 +40,16 @@ export default function Project({
       <div
         className={`
           relative w-full max-w-4xl flex flex-col md:flex-row items-center md:justify-center
-          gap-8 p-8 md:p-10 rounded-3xl
+          gap-y-6 md:gap-x-8 p-0 md:p-10 rounded-3xl
           shadow-2xl transition-all duration-500 ease-out
-          min-h-[550px] md:min-h-[750px] lg:min-h-[750px] max-h-[800px] 
+          min-h-[850px] md:min-h-[750px] lg:min-h-[750px] max-h-[800px] 
           hover:scale-[1.02] hover:shadow-red-900/50
           bg-gradient-to-br from-red-950 via-red-900 to-orange-700
           border border-red-800/50
         `}
       >
         {/* Background Pattern */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[length:20px_20px] rounded-3xl opacity-30" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(129, 84, 84, 0.03)_1px,transparent_1px)] bg-[length:20px_20px] rounded-3xl opacity-30" />
 
         {/* Title Container - Fixed Center Alignment */}
         <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-full text-center">
@@ -65,10 +64,10 @@ export default function Project({
           </h3>
         </div>
 
-        {/* Video Section - Restored Original Size & Aspect Ratio */}
+        {/* Video Section */}
         <div
           className={`
-            relative w-full max-w-[200px] md:max-w-[320px] lg:max-w-[320px] aspect-[1/2]
+            relative w-full max-w-[280px] md:max-w-[320px] lg:max-w-[320px] aspect-[1/2]
             rounded-2xl overflow-hidden shadow-xl transition-all duration-300
             hover:scale-[1.03] mt-20 md:mt-24
             ${isHovered ? 'shadow-orange-900/50' : 'shadow-black/40'}
@@ -84,22 +83,21 @@ export default function Project({
           />
         </div>
 
-        {/* Text Section - Perfectly Centered */}
-        <div
-          className="flex-1 max-w-full md:max-w-[35%] text-center md:text-left self-center"
-        >
-          <p
-            className={`
-              text-red-100 text-lg sm:text-xl leading-relaxed mb-6
-              transition-all duration-500 pl-4 md:pl-6
-              font-sans font-medium tracking-wide
-              border-l-4 border-orange-400
-              ${isHovered ? 'text-white' : ''}
-            `}
-            style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.2)' }}
-          >
-            {description}
-          </p>
+        {/* Text Section */}
+        <div className="flex-1 max-w-full md:max-w-[35%] text-center md:text-left self-center">
+        <p
+  className={`
+    text-red-100 text-lg sm:text-xl leading-relaxed mb-6
+    transition-all duration-500 pl-6 md:pl-6 
+    font-sans font-medium tracking-wide
+    border-l-8 border-orange-400
+    ${isHovered ? 'text-white' : ''}
+  `}
+  style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.2)' }}
+>
+  {description}
+</p>
+
         </div>
       </div>
     </motion.div>

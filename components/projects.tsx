@@ -20,7 +20,7 @@ const ArrowRight = () => (
 );
 
 export default function Projects() {
-  const { ref: sectionRef } = useSectionInView("Projects", 0.5);
+  const { ref: sectionRef } = useSectionInView("Projects", window.innerWidth < 1024 ? 0.2 : 0.5);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
 

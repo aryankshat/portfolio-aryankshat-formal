@@ -65,14 +65,14 @@ export const projectsData = [
     description: 
       "An app that motivates buyers to hit their goals with exciting rewards when they’re close, helping sellers boost sales and earnings. Buyers enjoy rewards they might’ve missed, creating a win-win for both!",
     tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    videoUrl:  "https://www.youtube.com/embed/BytZhTdKEy0",
+    videoUrl:  "https://www.youtube.com/embed/VCWj232dVj8",
   },
   {
     title: "Starlight",
     description:
       "Unlock a world of entertainment with our app, offering seamless streaming of movies and shows, plus smart parental controls, device management, and personalized features for an engaging and family-friendly experience.",
     tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    videoUrl:  "https://www.youtube.com/embed/J5XMS2sERyg",
+    videoUrl:  "https://www.youtube.com/embed/HhOW1f14mzo",
   },
 ] as const;
 
